@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>SafeSpace - Youth Mental Health Foundation</title>
+    <meta name="viewport" content="width=device-width">
+  </head>
+  <script type="text/javascript">
+  function _boot() {
+    if ('boot' in window && typeof boot === 'function') {
+      boot();
+    }
+  }
+
+  WebFontConfig = {
+    fontdeck: { id: '61450' },
+    active: _boot,
+    inactive: _boot
+  };
+
+  // after 2 seconds, boot even if the font hasn't loaded in case an ad-blocker
+  // prevents fontdeck from loading
+  setTimeout(function() {
+    if ('WebFont' in window) { return; }
+    _boot();
+  }, 2000);
+
+  (function() {
+    var wf = document.createElement('script');
+    wf.src = ('https:' == document.location.protocol ? 'https' : 'http') +
+    '://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
+    wf.type = 'text/javascript';
+    wf.async = 'true';
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(wf, s);
+  })();
+  </script>
+  <link rel="stylesheet" href="css/app.css" media="screen" charset="utf-8">
+  <body>
+    <div id="error404">
+      <div class="container">
+
+        <h2>Sorry, there’s no such page.</h2>
+        <p>
+          Try <a href="http://safespace.org">the main site</a>, instead.
+        </p>
+      </div>
+    </div>
+  </body>
+</html>
